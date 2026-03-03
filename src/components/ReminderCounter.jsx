@@ -49,7 +49,7 @@ function ReminderCounter(){
 
     return ( // returns this component
         <div>
-            <div style={{"padding": "50px", "fontSize": "30px"}}>{hour.toString().padStart(2, "0")} : {minute.toString().padStart(2, "0")} : {second.toString().padStart(2, "0")}</div>
+            <div style={{"padding": "50px", "fontSize": "30px"}}>{hour.toString().padStart(2, "0")} : {minute.toString().padStart(2, "0")} : {(second % 60).toString().padStart(2, "0")}</div>
             <br />
             <CounterForm onSecondChange={(s)=>setLimit(s)}/>
             <br />
